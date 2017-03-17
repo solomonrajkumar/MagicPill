@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,17 +23,72 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="miraclePillEmoji" translatesAutoresizingMaskIntoConstraints="NO" id="zTy-ib-pae">
-                                <rect key="frame" x="110" y="28" width="101" height="56"/>
+                                <rect key="frame" x="109.5" y="28" width="101" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="Bz2-jG-N3k"/>
                                     <constraint firstAttribute="width" constant="101" id="kwG-Mc-wUI"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MagicPill" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZqB-tR-edN">
+                                <rect key="frame" x="115" y="100" width="90" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Jvz-uK-Ngl"/>
+                                    <constraint firstAttribute="width" constant="90" id="rpl-kK-fin"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
+                                <color key="textColor" red="0.10588235294117647" green="0.10588235294117647" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$150" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ziV-8X-HwT">
+                                <rect key="frame" x="115" y="137" width="90" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="XpI-qS-u1o"/>
+                                    <constraint firstAttribute="height" constant="21" id="a8m-La-Znt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="18"/>
+                                <color key="textColor" red="0.1058823529" green="0.1058823529" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CHL-WJ-188" userLabel="DividerLine">
+                                <rect key="frame" x="36" y="174" width="248" height="1"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="5qv-yz-0If"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xxh-wd-jcp">
+                                <rect key="frame" x="36" y="183" width="248" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="SCB-UT-Sr9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                                <color key="textColor" red="0.1058823529" green="0.1058823529" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter you first name..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C9d-ct-MDl">
+                                <rect key="frame" x="36" y="212" width="248" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ziV-8X-HwT" firstAttribute="top" secondItem="ZqB-tR-edN" secondAttribute="bottom" constant="16" id="5bH-Od-QPs"/>
+                            <constraint firstItem="Xxh-wd-jcp" firstAttribute="leading" secondItem="CHL-WJ-188" secondAttribute="leading" id="8ia-A3-Q5Z"/>
                             <constraint firstItem="zTy-ib-pae" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FcD-Rk-yZ5"/>
+                            <constraint firstItem="ziV-8X-HwT" firstAttribute="centerX" secondItem="ZqB-tR-edN" secondAttribute="centerX" id="HU1-Zp-kVY"/>
+                            <constraint firstItem="CHL-WJ-188" firstAttribute="top" secondItem="ziV-8X-HwT" secondAttribute="bottom" constant="16" id="LcX-de-x83"/>
                             <constraint firstItem="zTy-ib-pae" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="MMM-2v-Xxv"/>
+                            <constraint firstItem="C9d-ct-MDl" firstAttribute="leading" secondItem="Xxh-wd-jcp" secondAttribute="leading" id="PV6-c8-7NR"/>
+                            <constraint firstItem="ZqB-tR-edN" firstAttribute="centerX" secondItem="zTy-ib-pae" secondAttribute="centerX" id="Uqj-2r-kRA"/>
+                            <constraint firstItem="CHL-WJ-188" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="gUu-aE-qDZ"/>
+                            <constraint firstItem="Xxh-wd-jcp" firstAttribute="trailing" secondItem="CHL-WJ-188" secondAttribute="trailing" id="mCJ-jY-Gaj"/>
+                            <constraint firstItem="C9d-ct-MDl" firstAttribute="top" secondItem="Xxh-wd-jcp" secondAttribute="bottom" constant="8" id="mdZ-95-2gz"/>
+                            <constraint firstItem="Xxh-wd-jcp" firstAttribute="top" secondItem="CHL-WJ-188" secondAttribute="bottom" constant="8" id="n2F-tV-dAj"/>
+                            <constraint firstItem="ZqB-tR-edN" firstAttribute="top" secondItem="zTy-ib-pae" secondAttribute="bottom" constant="16" id="o4x-5c-HCK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CHL-WJ-188" secondAttribute="trailing" constant="20" id="vNS-Xx-N8A"/>
+                            <constraint firstItem="C9d-ct-MDl" firstAttribute="trailing" secondItem="Xxh-wd-jcp" secondAttribute="trailing" id="xFe-9t-fMV"/>
                         </constraints>
                     </view>
                 </viewController>
