@@ -83,6 +83,15 @@
                                 <color key="textColor" red="0.1058823529" green="0.1058823529" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pin Code" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K78-2M-goJ">
+                                <rect key="frame" x="36" y="418" width="248" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="CLq-fd-VN7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                                <color key="textColor" red="0.1058823529" green="0.1058823529" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter you first name..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C9d-ct-MDl">
                                 <rect key="frame" x="36" y="212" width="248" height="30"/>
                                 <nil key="textColor"/>
@@ -101,10 +110,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter you pin code..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iSK-jc-oKB">
+                                <rect key="frame" x="36" y="447" width="248" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBS-3v-Mls">
-                                <rect key="frame" x="36" y="384" width="93" height="26"/>
+                                <rect key="frame" x="36" y="384" width="248" height="26"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="93" id="YsD-Pd-rWK"/>
+                                    <constraint firstAttribute="width" constant="248" id="YSz-QU-MAK"/>
                                     <constraint firstAttribute="height" constant="26" id="uRm-Ye-C8s"/>
                                 </constraints>
                                 <state key="normal" title="Choose State"/>
@@ -113,18 +128,30 @@
                                 </connections>
                             </button>
                             <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RD2-rM-m0M">
-                                <rect key="frame" x="0.0" y="411" width="320" height="157"/>
+                                <rect key="frame" x="0.0" y="411" width="320" height="1"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="157" id="4Xa-Xb-BFb"/>
+                                    <constraint firstAttribute="height" constant="1" id="NoN-7a-ieN"/>
                                 </constraints>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Gm-qx-8A3">
+                                <rect key="frame" x="52" y="492" width="217" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="48G-Ez-vpM"/>
+                                    <constraint firstAttribute="width" constant="217" id="qJs-j7-DSn"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="buyNowBtn"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="iSK-jc-oKB" firstAttribute="trailing" secondItem="K78-2M-goJ" secondAttribute="trailing" id="1sW-Dk-Nt9"/>
                             <constraint firstItem="ziV-8X-HwT" firstAttribute="top" secondItem="ZqB-tR-edN" secondAttribute="bottom" constant="16" id="5bH-Od-QPs"/>
                             <constraint firstItem="Xxh-wd-jcp" firstAttribute="leading" secondItem="CHL-WJ-188" secondAttribute="leading" id="8ia-A3-Q5Z"/>
                             <constraint firstItem="fP2-Uw-iP1" firstAttribute="trailing" secondItem="GY9-yH-bMZ" secondAttribute="trailing" id="9gE-RX-Tqs"/>
                             <constraint firstItem="GY9-yH-bMZ" firstAttribute="leading" secondItem="iCe-sW-yhU" secondAttribute="leading" id="BVU-KJ-4DA"/>
+                            <constraint firstItem="K78-2M-goJ" firstAttribute="top" secondItem="xBS-3v-Mls" secondAttribute="bottom" constant="8" id="Cbe-II-V1X"/>
+                            <constraint firstItem="6Gm-qx-8A3" firstAttribute="top" secondItem="iSK-jc-oKB" secondAttribute="bottom" constant="15" id="D7j-Vg-GNw"/>
+                            <constraint firstItem="K78-2M-goJ" firstAttribute="trailing" secondItem="xBS-3v-Mls" secondAttribute="trailing" id="Ds4-yy-bzB"/>
                             <constraint firstItem="zTy-ib-pae" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FcD-Rk-yZ5"/>
                             <constraint firstItem="ziV-8X-HwT" firstAttribute="centerX" secondItem="ZqB-tR-edN" secondAttribute="centerX" id="HU1-Zp-kVY"/>
                             <constraint firstItem="fP2-Uw-iP1" firstAttribute="top" secondItem="GY9-yH-bMZ" secondAttribute="bottom" constant="8" id="IB6-mN-veG"/>
@@ -139,6 +166,10 @@
                             <constraint firstItem="NDy-j9-4Pq" firstAttribute="top" secondItem="C9d-ct-MDl" secondAttribute="bottom" constant="8" id="Ub1-4n-0EV"/>
                             <constraint firstItem="GY9-yH-bMZ" firstAttribute="trailing" secondItem="iCe-sW-yhU" secondAttribute="trailing" id="Ujd-qe-5Bu"/>
                             <constraint firstItem="ZqB-tR-edN" firstAttribute="centerX" secondItem="zTy-ib-pae" secondAttribute="centerX" id="Uqj-2r-kRA"/>
+                            <constraint firstItem="iSK-jc-oKB" firstAttribute="top" secondItem="K78-2M-goJ" secondAttribute="bottom" constant="8" id="WGu-Z7-a0l"/>
+                            <constraint firstItem="6Gm-qx-8A3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WPi-F3-buI"/>
+                            <constraint firstItem="K78-2M-goJ" firstAttribute="leading" secondItem="xBS-3v-Mls" secondAttribute="leading" id="akd-Rd-DEg"/>
+                            <constraint firstItem="iSK-jc-oKB" firstAttribute="leading" secondItem="K78-2M-goJ" secondAttribute="leading" id="d76-DL-7JK"/>
                             <constraint firstItem="NDy-j9-4Pq" firstAttribute="trailing" secondItem="C9d-ct-MDl" secondAttribute="trailing" id="eyT-VS-VBL"/>
                             <constraint firstItem="CHL-WJ-188" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="gUu-aE-qDZ"/>
                             <constraint firstItem="RD2-rM-m0M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iFr-uf-BA5"/>
@@ -156,6 +187,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="buyNowButton" destination="6Gm-qx-8A3" id="Xfa-cR-bZr"/>
+                        <outlet property="pinCodeLabel" destination="K78-2M-goJ" id="Qkq-iZ-pB4"/>
+                        <outlet property="pinCodeTextField" destination="iSK-jc-oKB" id="6Qm-lk-0eO"/>
                         <outlet property="stateButton" destination="xBS-3v-Mls" id="OQZ-Fp-YVU"/>
                         <outlet property="statePicker" destination="RD2-rM-m0M" id="pBU-eI-CHj"/>
                     </connections>
@@ -166,6 +200,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="buyNowBtn" width="225" height="45"/>
         <image name="miraclePillEmoji" width="90" height="90"/>
     </resources>
 </document>

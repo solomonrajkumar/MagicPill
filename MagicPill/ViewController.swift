@@ -15,12 +15,20 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var stateButton: UIButton!
     
     @IBOutlet weak var statePicker: UIPickerView!
-
+    @IBOutlet weak var pinCodeTextField: UITextField!
+    @IBOutlet weak var buyNowButton: UIButton!
+    @IBOutlet weak var pinCodeLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         statePicker.dataSource = self
         statePicker.delegate = self
+        
+        let heightConstraint = NSLayoutConstraint(item: statePicker, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: 157)
+        
+        view.addConstraints([heightConstraint])
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,6 +39,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBAction func stateButtonPressed(_ sender: Any) {
         
         statePicker.isHidden = false
+        pinCodeLabel.isHidden = true
+        pinCodeTextField.isHidden = true
+        buyNowButton.isHidden = true
         
     }
     
@@ -56,6 +67,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         stateButton.setTitle(states[row], for: .normal)
         statePicker.isHidden = true
+        pinCodeLabel.isHidden = false
+        pinCodeTextField.isHidden = false
+        buyNowButton.isHidden = false
         
     }
 
